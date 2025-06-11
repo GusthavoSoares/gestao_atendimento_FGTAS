@@ -1,0 +1,81 @@
+body {
+    background-color: #F2F2F2;
+    font-family: 'Inter', sans-serif;
+}
+
+#intro{
+    font-size: large;
+    color: #211782;
+}
+
+.card {
+    border-radius: 0.75rem;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #090438;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #095e38;
+}
+
+.text-primary-fgtas {
+    color: #090438;
+}
+
+.link-fgtas {
+    color:#095e38;
+    text-decoration: none;
+}
+
+.link-fgtas:hover {
+    color:#090438;
+    text-decoration: underline;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+}
+
+.alert {
+    border-radius: 0.5rem;
+}
+
+.logo-fgtas {
+    width: 120px;
+    margin-bottom: 1rem;
+
+}
+
+
+.form-check-input:checked {
+    background-color: #090438;  /* Azul escuro */
+    border-color: #090438;
+}
+
+.form-check-input {
+    border-color: #003366;
+}
+
+
+.form-check-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-check-input:focus-visible {
+    box-shadow: 0 0 0 0.2rem rgba(0, 51, 102, 0.25);
+}
+
+#toggleSenha {
+    border: none;
+    background: none;
+    padding: 0.5rem;
+}
+
+#toggleSenha:hover {
+    color: #003366;
+}

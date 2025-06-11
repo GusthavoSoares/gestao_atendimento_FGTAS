@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <title>Atendimentos</title>
+</head>
+
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">FGTAS</a>
+        <div class="navbar-nav ms-auto">
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle me-1"></i>Usuario
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Perfil</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Configurações</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 col-lg-2 bg-white shadow-sm min-vh-100">
+            <div class="p-3">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-speedometer"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-plus-circle me-2"></i>Adicionar Atendimento
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-person-fill-lock"></i> Admin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- ? Conteudo principal vai aqui!!!! -->
+        <div class="col-md-9 col-lg-10">
+            <div class="p-4">
+                <!-- Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h1 class="h3 fw-bold">Formulário</h1>
+                        <p class="text-muted">Revise bem os dados antes de enviar o formulário. Quando os dados
+                            estiverem confirmados, clique em "Declaro que os dados inseridos estão corretos"</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!-- Card com forms -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <h4>Cadastrar Atendimento</h4>
+                    </div>
+
+                    <!-- Card corpo -->
+                    <div class="card-body">
+
+                        <form class="row g-3 needs-validation" method="post" id="formAtendimento" novalidate>
+                            <!-- Nome do atendente (readonly) -->
+                            <div class="col-md-4">
+                                <label for="atendenteNome" class="form-label">Nome do atendente</label>
+                                <input type="text" class="form-control" id="atendenteNome"
+                                       name="identificacaoAtendente" required>
+                                <div class="valid-feedback">Parece bom!</div>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <!-- Forma de atendimento -->
+                            <div class="col-md-3">
+                                <label for="formaAtendimento" class="form-label">Forma de Atendimento</label>
+                                <select name="formaAtendimento" class="form-select" id="formaAtendimento" required>
+                                    <option selected value="">Selecione...</option>
+                                    <option value="Presencial">Presencial</option>
+                                    <option value="Whatsapp">Whatsapp</option>
+                                    <option value="Ligação Telefônica">Ligação Telefônica</option>
+                                    <option value="E-mail">E-mail</option>
+                                    <option value="Redes Sociais">Redes Sociais</option>
+                                    <option value="Teams">Teams</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, selecione uma opção válida!</div>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <!-- Perfil publico -->
+                            <div class="col-md-3">
+                                <label for="perfilAtendido" class="form-label">Perfil do atendido</label>
+                                <select name="perfilPublico" class="form-select" id="perfilAtendido" required>
+                                    <option selected value="">Selecione...</option>
+                                    <option value="Empregador">Empregador</option>
+                                    <option value="Trabalhador">Trabalhador</option>
+                                    <option value="Outras Agências">Outras Agências</option>
+                                    <option value="ADS">ADS</option>
+                                    <option value="Setores da FGTAS">Setores da FGTAS</option>
+                                    <option value="Interessado em informações sobre o Mercado de Trabalho">
+                                        Interessado no Mercado de trabalho</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, selecione uma opção válida!</div>
+                            </div>
+
+                            <!-- Informacao adicional de publico -->
+                            <div class="col-md-3">
+                                <label for="nomeAtendido" class="form-label">Nome do atendido</label>
+                                <input type="text" class="form-control" id="nomeAtendido" placeholder="Nome"
+                                       name="nomePublico" required>
+                                <div class="invalid-feedback">Por favor, insira um valor válido.</div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="contatoAtendido" class="form-label">Contato</label>
+                                <input type="text" class="form-control" id="contatoAtendido"
+                                       placeholder="Telefone ou E-mail" name="contatoPublico" required>
+                                <div class="invalid-feedback">Por favor, insira um valor válido.</div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="documentoAtendido" class="form-label">Documento</label>
+                                <input type="text" class="form-control" id="documentoAtendido"
+                                       placeholder="CPF ou CNPJ" name="documentoPublico" required>
+                                <div class="invalid-feedback">Por favor, insira um valor válido.</div>
+                            </div>
+
+                            <div class="w-100"></div>
+
+                            <!-- Tipo de Atendimento -->
+                            <div class="col-5">
+                                <label for="tipoAtendimento" class="form-label">Tipo de Atendimento</label>
+                                <select name="tipoAtendimento" class="form-select" id="tipoAtendimento" required>
+                                    <option selected value="">Selecione...</option>
+                                    <option id="carteira_de_trabalho" value="carteira de trabalho, SD, vagas">
+                                        Carteira de Trabalho, SD, Vagas</option>
+                                    <option id="programa_gaucho_artesanato" value="programa gaucho de artesanato">
+                                        Programa Gaúcho do Artesanato</option>
+                                    <option id="vida_centro_humanistico" value="Vida Centro Humanistico">Vida Centro
+                                        Humanístico</option>
+                                    <option value="orientações sobre empreendedorismo">Orientações sobre
+                                        empreendedorismo</option>
+                                    <option value="orientações sobre cursos de qualificação">Orientações sobre
+                                        cursos de qualificação</option>
+                                    <option id="mercado_trabalho" value="informações sobre mercado de trabalho">
+                                        Informações sobre o Mercado de Trabalho</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor, selecione uma opção válida!</div>
+                            </div>
+
+                            <!-- Container dinâmico de opções adicionais -->
+                            <div class="col-12" id="tipoAtendimentoExtraContainer"></div>
+
+                            <!-- Termos -->
+                            <div class="col-12">
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                           required>
+                                    <label class="form-check-label" for="invalidCheck">Declaro que os dados
+                                        inseridos estão corretos</label>
+                                    <div class="invalid-feedback">Você deve aceitar os termos antes de enviar.</div>
+                                </div>
+                            </div>
+
+                            <!-- Botão -->
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit">Enviar formulário</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+<script src="/js/forms.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

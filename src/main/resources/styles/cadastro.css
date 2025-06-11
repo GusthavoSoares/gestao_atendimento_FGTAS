@@ -1,0 +1,84 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-title,
+.form-label,
+.form-select,
+label,
+select,
+input::placeholder {
+    color: #090438;
+}
+.card-title {
+    color: #090438 !important;
+}
+
+
+.card {
+    border-radius: 0.75rem;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #212529;
+}
+
+.btn-primary {
+    background-color: #090438;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.btn-primary:hover {
+    background-color: #095e38;
+}
+
+.btn-danger {
+    background-color: #090438;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #095e38;
+}
+.form-control, .form-select {
+    border-radius: 0.5rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+}
+
+.input-group-text, .btn-outline-secondary {
+    background-color: transparent;
+    border: none;
+    color: #495057;
+}
+
+.input-group-text i, .btn-outline-secondary i {
+    font-size: 1.2rem;
+}
+
+
+
+.btn-toggle-senha {
+    background: none;
+    border: none;
+    color: #003366; /* Azul escuro */
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.btn-toggle-senha:focus {
+    outline: none;
+    box-shadow: none;
+}
