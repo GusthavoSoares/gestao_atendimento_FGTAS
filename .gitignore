@@ -1,0 +1,15 @@
+# Ignorar arquivos compilados e diretórios de build
+/target/
+*.class
+
+# Ignorar configurações do VS Code
+.vscode/
+
+# Ignorar arquivos temporários
+*.log
+*.tmp
+*.swp
+
+# Ignorar arquivos de sistema
+.DS_Store
+Thumbs.db
