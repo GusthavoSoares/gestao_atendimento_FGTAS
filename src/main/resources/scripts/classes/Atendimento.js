@@ -27,12 +27,12 @@ class Atendimento {
     }
     gerarResumo(container) {
         container.innerHTML = `
-        <p>Nome do atendente: ${this.#nomeAtendente.value}</p>
-        <p>Forma de atendimento: ${this.#formaAtendimento.value}</p>
+        <p>Atendente: ${this.#nomeAtendente.value}</p>
+        <p>Forma de Atendimento: ${this.#formaAtendimento.value}</p>
         <p>Perfil do atendido: ${this.#perfilAtendido.value}</p>
         <p>Nome do atendido: ${this.#nomeAtendido.value}</p>
-        <p>Contato do atendido: ${this.#contato.value}</p>
-        <p>Documento de identificação: ${this.#documento.value}</p>
+        <p>Contato: ${this.#contato.value}</p>
+        <p>Documento: ${this.#documento.value}</p>
         <p>Tipo de atendimento: ${this.#tipoAtendimento.value}</p>
         `
             ;
