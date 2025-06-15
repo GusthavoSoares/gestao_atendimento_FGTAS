@@ -43,5 +43,11 @@ public class LoginPageTest {
         org.testng.Assert.assertEquals(alerta, "CPF válido!",
                 "Mensagem de alerta deve indicar que o CPF é válido");
     }
-
+    @Test(description = "Deve mostrar mensagem de CPF inválido.")
+    public void cpfInvalido() {
+        page.setCpf("88339384773");
+        String alerta = page.getAlertaCpf();
+        org.testng.Assert.assertEquals(alerta, "CPF inválido!",
+                "Mensagem de alerta deve indicar que o CPF é inválido");
+    }
 }
