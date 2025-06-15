@@ -100,11 +100,11 @@ public class AtendimentoPage implements IntAtendimentoPage {
                 ExpectedConditions.elementToBeClickable(btnEnviarBy)
         );
 
-        // scroll para trazê‑lo ao centro da viewport
+
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].scrollIntoView({ block: 'center' });", btn);
 
-        // tenta clicar normalmente, com fallback em JS
+
         try {
             btn.click();
         } catch (ElementClickInterceptedException e) {
