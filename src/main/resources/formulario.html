@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./styles/dashboard.css">
     <title>Atendimentos</title>
 </head>
 
@@ -16,7 +15,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.html">FGTAS</a>
+        <a class="navbar-brand fw-bold" href="login.html">FGTAS</a>
         <div class="navbar-nav ms-auto">
             <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
@@ -28,7 +27,8 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                    <li><a class="dropdown-item" href="login.html"><i
+                            class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -89,13 +89,12 @@
                     <!-- Card corpo -->
                     <div class="card-body">
 
-                        <form class="row g-3 needs-validation" method="post" id="formAtendimento" novalidate>
+                        <form class="row g-3 needs-validation" method="post" id="formularioAtend">
                             <!-- Nome do atendente (readonly) -->
                             <div class="col-md-4">
                                 <label for="atendenteNome" class="form-label">Nome do atendente</label>
                                 <input type="text" class="form-control" id="atendenteNome"
                                        name="identificacaoAtendente" required>
-                                <div class="valid-feedback">Parece bom!</div>
                             </div>
 
                             <div class="w-100"></div>
@@ -112,7 +111,6 @@
                                     <option value="Redes Sociais">Redes Sociais</option>
                                     <option value="Teams">Teams</option>
                                 </select>
-                                <div class="invalid-feedback">Por favor, selecione uma opção válida!</div>
                             </div>
 
                             <div class="w-100"></div>
@@ -130,7 +128,6 @@
                                     <option value="Interessado em informações sobre o Mercado de Trabalho">
                                         Interessado no Mercado de trabalho</option>
                                 </select>
-                                <div class="invalid-feedback">Por favor, selecione uma opção válida!</div>
                             </div>
 
                             <!-- Informacao adicional de publico -->
@@ -138,23 +135,21 @@
                                 <label for="nomeAtendido" class="form-label">Nome do atendido</label>
                                 <input type="text" class="form-control" id="nomeAtendido" placeholder="Nome"
                                        name="nomePublico" required>
-                                <div class="invalid-feedback">Por favor, insira um valor válido.</div>
+
                             </div>
 
                             <div class="col-md-3">
                                 <label for="contatoAtendido" class="form-label">Contato</label>
                                 <input type="text" class="form-control" id="contatoAtendido"
                                        placeholder="Telefone ou E-mail" name="contatoPublico" required>
-                                <div class="invalid-feedback">Por favor, insira um valor válido.</div>
                             </div>
 
                             <div class="col-md-3">
-                                <label for="documentoAtendido" class="form-label">Documento</label>
-                                <input type="text" class="form-control" id="documentoAtendido"
-                                       placeholder="CPF ou CNPJ" name="documentoPublico" required>
-                                <div class="invalid-feedback">Por favor, insira um valor válido.</div>
+                                <label for="documentoAtend" class="form-label">Documento</label>
+                                <input type="text" class="form-control" id="documentoAtend"
+                                       placeholder="CPF ou CNPJ" name="documentoPublico" required maxlength="14">
                             </div>
-
+                            <span id="alertaDocumento" role="alert"></span>
                             <div class="w-100"></div>
 
                             <!-- Tipo de Atendimento -->
@@ -175,7 +170,6 @@
                                     <option id="mercado_trabalho" value="informações sobre mercado de trabalho">
                                         Informações sobre o Mercado de Trabalho</option>
                                 </select>
-                                <div class="invalid-feedback">Por favor, selecione uma opção válida!</div>
                             </div>
 
                             <!-- Container dinâmico de opções adicionais -->
@@ -194,7 +188,8 @@
 
                             <!-- Botão -->
                             <div class="col-12">
-                                <button class="btn btn-primary" type="submit">Enviar formulário</button>
+                                <button class="btn btn-primary" type="submit" id="btn_enviar">Enviar
+                                    formulário</button>
                             </div>
                         </form>
                     </div>
@@ -207,14 +202,17 @@
 
     </div>
 </div>
-</div>
 
 
-<script src="/js/forms.js"></script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+<script src="./scripts/utils.js" defer></script>
+<script src="./scripts/alertas.js" defer></script>
+<script src="./scripts/validacao.js" defer></script>
+<script src="./scripts/formulario.js" defer></script>
 </body>
 
 </html>
