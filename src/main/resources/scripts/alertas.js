@@ -1,17 +1,21 @@
-function criarMensagem(elemento, texto, classes) {
-    for (const classe of classes) {
-        adicionaClasse(elemento, classe)
-    }
-    adicionaTexto(elemento, texto)
-    limparMensagem(elemento, classes)
+let limparTimer = null;
+
+function limparMensagem(elemento, classes, delay = 5000) {
+    if (limparTimer) clearTimeout(limparTimer);
+
+    limparTimer = setTimeout(() => {
+        for (const classe of classes) {
+            removeClasse(elemento, classe);
+        }
+        removeTexto(elemento);
+        limparTimer = null;
+    }, delay);
 }
 
-function limparMensagem(elemento, classes) {
-    setTimeout(
-        () => {
-            for (const classe of classes) {
-                removeClasse(elemento, classe)
-            }
-            removeTexto(elemento)
-        }, 10000)
+function mostraAlerta(elemento, texto, classes, delay) {
+    elemento.textContent = texto;
+    for (const classe of classes) {
+        adicionaClasse(elemento, classe);
+    }
+    limparMensagem(elemento, classes, delay);
 }
