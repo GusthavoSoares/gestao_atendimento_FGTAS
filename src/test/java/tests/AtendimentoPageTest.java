@@ -36,6 +36,14 @@ public class AtendimentoPageTest {
         }
     }
 
+    @Test(description = "Não deve aceitar um CPF inválido ")
+    public void validaCPFInvalido() {
+        page.setDocumento("11111111111");
+        String alerta = page.getAlertaDocumento();
+        Assert.assertEquals(alerta, "CPF inválido!",
+                "Mensagem de alerta deve indicar que o CPF é inválido");
+    }
+
     @Test(description = "Não deve aceitar um CNPJ inválido ")
     public void validaCNPJInvalido() {
         page.setDocumento("11111111111111");
