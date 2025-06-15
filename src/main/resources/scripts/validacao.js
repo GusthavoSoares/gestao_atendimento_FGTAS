@@ -40,32 +40,33 @@ function validaDocumento(documento, campoAlerta) {
     if (tamanhoDoc === 14) {
         if (!validarCNPJ(documento)) {
             if (existeClasse(campoAlerta, 'alert-success')) removeClasse(campoAlerta, 'alert-success');
-            return criarMensagem(campoAlerta, "CNPJ inválido!", classesFracasso);
+            return mostraAlerta(campoAlerta, "CNPJ inválido!", classesFracasso);
         }
         if (existeClasse(campoAlerta, 'alert-danger')) {
             removeClasse(campoAlerta, 'alert-danger');
         }
-        criarMensagem(campoAlerta, "CNPJ válido!", classesSucesso);
+        mostraAlerta(campoAlerta, "CNPJ válido!", classesSucesso);
     }
     else if (tamanhoDoc === 11) {
         if (!validarCPF(documento)) {
             if (existeClasse(campoAlerta, 'alert-success')) removeClasse(campoAlerta, 'alert-success');
-            return criarMensagem(campoAlerta, "CPF inválido!", classesFracasso);
+            return mostraAlerta(campoAlerta, "CPF inválido!", classesFracasso);
         }
         if (existeClasse(campoAlerta, 'alert-danger')) {
             removeClasse(campoAlerta, 'alert-danger');
         }
-        criarMensagem(campoAlerta, "CPF válido!", classesSucesso);
+        mostraAlerta(campoAlerta, "CPF válido!", classesSucesso);
     }
     else if (tamanhoDoc === 0) {
         if (existeClasse(campoAlerta, 'alert-sucess')) {
             removeClasse(campoAlerta, 'alert-success');
         }
-        criarMensagem(campoAlerta, "Insira apenas números!", classesFracasso);
+        mostraAlerta(campoAlerta, "Insira apenas números!", classesFracasso);
     } else {
         if (existeClasse(campoAlerta, 'alert-success')) {
             removeClasse(campoAlerta, 'alert-success');
         }
-        criarMensagem(campoAlerta, "Documento inválido!", classesFracasso);
+        mostraAlerta(campoAlerta, "Documento inválido!", classesFracasso);
     }
 }
+
