@@ -74,7 +74,7 @@ Através de testes **unitários** e **end-to-end**, busca-se:
     </td>
     <td align="center">
       <a href="https://github.com/BernardoLencina">
-        <img src="https://github.com/user-attachments/assets/728caebf-98cf-4c50-99df-72e6c3660e2b" width="100px" alt="Foto do Bernardo Lencina"/><br>
+        <img src="https://github.com/user-attachments/assets/28a2e974-d823-4d67-a34f-6792e3ec4830" width="100px" alt="Foto do Bernardo Lencina"/><br>
         <sub><b>Bernardo Lencina</b></sub>
       </a>
     </td>
