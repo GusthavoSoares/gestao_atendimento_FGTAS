@@ -45,7 +45,5 @@ Através de testes **unitários** e **end-to-end**, busca-se:
 
 ---
 
----
-
 🤝 Colaboradores
 <table> <tr> <td align="center"> <a href="https://github.com/Rangel202"> <img src="https://github.com/user-attachments/assets/ec332b51-90fd-4579-a683-95c0d7ab4505" width="100px" alt="Foto do Gabriel Rangel"/><br> <sub><b>Gabriel Rangel</b></sub> </a> </td> <td align="center"> <a href="https://github.com/GusthavoSoares"> <img src="https://github.com/user-attachments/assets/5f93c288-4139-414f-96b7-027a1a0d6416" width="100px" alt="Foto do Gusthavo Soares"/><br> <sub><b>Gusthavo Soares</b></sub> </a> </td> <td align="center"> <a href="https://github.com/miguellessa"> <img src="https://github.com/user-attachments/assets/e37eef0f-d235-4c94-ba70-2598d326f49f" width="100px" alt="Foto do Miguel Lessa"/><br> <sub><b>Miguel Lessa</b></sub> </a> </td> <td align="center"> <a href="https://github.com/RianBPadilha"> <img src="https://via.placeholder.com/100x100.png?text=Rian" width="100px" alt="Foto do Rian Padilha"/><br> <sub><b>Rian Padilha</b></sub> </a> </td> <td align="center"> <a href="https://github.com/BernardoLencina"> <img src="https://via.placeholder.com/100x100.png?text=Bernardo" width="100px" alt="Foto do Bernardo Lencina"/><br> <sub><b>Bernardo Lencina</b></sub> </a> </td> </tr> </table>
