@@ -1,11 +1,7 @@
 package tests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 import pages.LoginPage;
@@ -40,14 +36,14 @@ public class LoginPageTest {
     public void cpfValido() {
         page.setCpf("52998224725");
         String alerta = page.getAlertaCpf();
-        org.testng.Assert.assertEquals(alerta, "CPF válido!",
+        Assert.assertEquals(alerta, "CPF válido!",
                 "Mensagem de alerta deve indicar que o CPF é válido");
     }
     @Test(description = "Deve mostrar mensagem de CPF inválido.")
     public void cpfInvalido() {
         page.setCpf("88339384773");
         String alerta = page.getAlertaCpf();
-        org.testng.Assert.assertEquals(alerta, "CPF inválido!",
+        Assert.assertEquals(alerta, "CPF inválido!",
                 "Mensagem de alerta deve indicar que o CPF é inválido");
     }
 }
