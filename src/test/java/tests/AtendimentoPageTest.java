@@ -68,11 +68,10 @@ public class AtendimentoPageTest {
                 By.cssSelector("#dadosAtendimento p"), 0
         ));
 
-        List<WebElement> paras = page.getResumoParagraphs();
+        List<WebElement> parag = page.getResumoParagraphs();
 
-        Assert.assertEquals(paras.size(), 7, "Deve gerar 7 parágrafos de resumo");
+        Assert.assertEquals(parag.size(), 7, "Deve gerar 7 parágrafos de resumo");
 
-        // e agora valida conteúdo
         Assert.assertEquals(page.getResumoParagraph(0), "Atendente: Maria");
         Assert.assertEquals(page.getResumoParagraph(1), "Forma de Atendimento: E-mail");
         Assert.assertEquals(page.getResumoParagraph(2), "Perfil do atendido: Trabalhador");
